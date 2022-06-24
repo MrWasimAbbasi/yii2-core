@@ -83,7 +83,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right"><?= env('APP_NAME') .' '. Yii::getVersion() ?></p>
     </div>
 </footer>
 

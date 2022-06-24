@@ -17,7 +17,7 @@
         "yiisoft/yii2": "~2.0.15",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "vlucas/phpdotenv": "*",
+        "vlucas/phpdotenv": "5.4.x-dev",
         "beaten-sect0r/yii2-db-manager": "*",
         "beaten-sect0r/yii2-flatpickr": "*",
         "beaten-sect0r/yii2-phpsysinfo": "*",
@@ -35,7 +35,8 @@
         "bower-asset/html5shiv": "^3.0",
         "bower-asset/open-sans-fontface": "*",
         "bower-asset/highlightjs": "*",
-        "bower-asset/timecircles": "*"
+        "bower-asset/timecircles": "*",
+        "larapack/dd": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
@@ -53,6 +54,9 @@
         "optimize-autoloader": true,
         "fxp-asset": {
             "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
         }
     },
     "repositories": [

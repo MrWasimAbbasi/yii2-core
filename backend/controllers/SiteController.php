@@ -48,7 +48,6 @@ class SiteController extends Controller
     public function beforeAction($action)
     {
         $this->layout = Yii::$app->user->isGuest || !Yii::$app->user->can('loginToBackend') ? 'main-login' : 'main';
-
         return parent::beforeAction($action);
     }
 

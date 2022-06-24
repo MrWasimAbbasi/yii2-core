@@ -1,6 +1,9 @@
 <?php
 
 use Dotenv\Dotenv;
+use Dotenv\Repository\Adapter\EnvConstAdapter;
+use Dotenv\Repository\Adapter\PutenvAdapter;
+use Dotenv\Repository\RepositoryBuilder;
 
 /**
  * Require shortcuts
@@ -10,7 +13,14 @@ require_once __DIR__ . '/shortcuts.php';
 /**
  * Load application environment from .env file
  */
-$dotenv = Dotenv::create(dirname(__DIR__));
+$repository = RepositoryBuilder::createWithNoAdapters()
+    ->addAdapter(EnvConstAdapter::class)
+    ->addWriter(PutenvAdapter::class)
+    ->immutable()
+    ->make();
+
+
+$dotenv = Dotenv::create($repository, dirname(__DIR__));
 $dotenv->load();
 
 /**

@@ -1,7 +1,7 @@
 <?php
 
 $config = [
-    'name'=>'Yii2 Core',
+    'name'=>env('APP_NAME'),
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'extensions' => require __DIR__ . '/../../vendor/yiisoft/extensions.php',
     'timeZone' => env('TIMEZONE'),
